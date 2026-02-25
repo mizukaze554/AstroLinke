@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AstroLinke</title>
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/252421061?s=200&v=4" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html,
+    body {
+      min-height: 100%;
+      background-color: #020617;
+      overscroll-behavior-y: none;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        linear-gradient(rgba(2, 6, 23, 0.88), rgba(2, 6, 23, 0.9)),
+        url("https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=2200&q=80")
+          center / cover no-repeat;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      background: transparent;
+    }
+
+    .space-glow {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.25), 0 0 40px rgba(147, 51, 234, 0.18);
+    }
+
+    .text-glow {
+      text-shadow: 0 0 18px rgba(59, 130, 246, 0.45);
+    }
+
+    .image-mask::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(2, 6, 23, 0.95), rgba(2, 6, 23, 0.1));
+      pointer-events: none;
+    }
+
+    .glass-blur {
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .soft-blur {
+      filter: blur(22px);
+    }
+
+    .rise {
+      opacity: 0;
+      transform: translateY(28px) scale(0.985);
+      filter: blur(6px);
+      transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+    }
+
+    .rise.in-view {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+
+    .rise-delay-1 {
+      transition-delay: 0.15s;
+    }
+
+    .rise-delay-2 {
+      transition-delay: 0.3s;
+    }
+
+    .rise-delay-3 {
+      transition-delay: 0.45s;
+    }
+
+  </style>
+</head>
+<body class="text-gray-100 min-h-screen antialiased relative overflow-x-hidden">
+  <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.12),transparent_38%),radial-gradient(circle_at_80%_30%,rgba(147,51,234,0.1),transparent_36%)]"></div>
+
+  <header id="siteHeader" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-gray-950/70 border-b border-blue-900/30">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3 text-xl font-semibold tracking-wide text-white text-glow rise">
+        <img
+          src="https://avatars.githubusercontent.com/u/252421061?s=200&v=4"
+          alt="AstroLinke logo"
+          class="h-9 w-9 rounded-md border border-blue-400/40 object-cover"
+          loading="lazy"
+        />
+        <span>AstroLinke</span>
+      </a>
+      <div class="hidden sm:flex items-center gap-6 text-sm text-gray-300">
+        <a href="#home" class="hover:text-white rise">Home</a>
+        <a href="#vision" class="hover:text-white rise rise-delay-1">Vision</a>
+        <a href="#gallery" class="hover:text-white rise rise-delay-2">Gallery</a>
+        <a href="#projects" class="hover:text-white rise rise-delay-3">Projects</a>
+        <a href="mailto:linhtetln67@gmail.com" class="px-4 py-2 rounded-md border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 space-glow rise">Contact</a>
+      </div>
+      <button id="menuButton" type="button" class="sm:hidden inline-flex items-center justify-center h-10 w-10 rounded-md border border-blue-500/50 bg-blue-500/10 text-blue-200" aria-label="Toggle menu" aria-controls="mobileMenu" aria-expanded="false">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="sm:hidden hidden border-t border-blue-900/30 bg-gray-950/95">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm text-gray-300">
+        <a href="#home" class="mobile-link hover:text-white">Home</a>
+        <a href="#vision" class="mobile-link hover:text-white">Vision</a>
+        <a href="#gallery" class="mobile-link hover:text-white">Gallery</a>
+        <a href="#projects" class="mobile-link hover:text-white">Projects</a>
+        <a href="mailto:linhtetln67@gmail.com" class="mobile-link inline-flex w-fit px-3 py-2 text-xs rounded-md border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <section id="home" class="max-w-6xl mx-auto px-4 sm:px-6 pt-12 sm:pt-16 pb-20 sm:pb-28">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="max-w-3xl rise">
+          <p class="text-blue-300 uppercase tracking-[0.2em] text-xs mb-5 rise">AstroLinke Initiative</p>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight text-white text-glow rise rise-delay-1">
+            Simulate the Universe. Understand Reality.
+          </h1>
+          <p class="mt-6 text-lg text-gray-300 leading-relaxed max-w-2xl rise rise-delay-2">
+            AstroLinke is an open scientific initiative building realistic gravity, atmosphere, and rocket simulation systems.
+          </p>
+          <div class="mt-10 flex flex-wrap gap-4 rise rise-delay-3">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-md border border-gray-700 bg-gray-900/60 hover:border-blue-400 hover:text-white">
+              View GitHub
+            </a>
+            <a href="mailto:linhtetln67@gmail.com" class="px-6 py-3 rounded-md border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 space-glow">
+              Contact Us
+            </a>
+          </div>
+        </div>
+        <div class="relative rounded-2xl overflow-hidden border border-blue-900/40 h-[300px] sm:h-[380px] lg:h-[460px] image-mask card-glow rise rise-delay-2">
+          <img
+            src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1400&q=80"
+            alt="Deep space nebula"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+          <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-6 z-10">
+            <p class="text-xs uppercase tracking-[0.2em] text-blue-300 mb-2">Simulation Domain</p>
+            <p class="text-white text-lg sm:text-xl font-medium">Orbital Mechanics, Atmospheric Dynamics, Propulsion Models</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vision" class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+      <div class="mb-12 rise">
+        <h2 class="text-3xl md:text-4xl font-semibold text-white">Vision</h2>
+        <p class="mt-4 text-gray-300 max-w-2xl">
+          We develop physically grounded simulation modules that model planetary systems with scientific consistency.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="card-glow glass-blur bg-gray-900/45 border border-blue-900/30 rounded-xl overflow-hidden rise">
+          <img src="https://images.unsplash.com/photo-1447433819943-74a20887a81e?auto=format&fit=crop&w=1200&q=80" alt="Planets in space" class="h-44 w-full object-cover" loading="lazy" />
+          <div class="p-6">
+            <h3 class="text-xl font-medium text-white mb-3">Gravity Simulation</h3>
+            <p class="text-gray-300 leading-relaxed">
+              Precise orbital and field modeling for multi-body systems, from local dynamics to large-scale celestial interactions.
+            </p>
+          </div>
+        </article>
+        <article class="card-glow glass-blur bg-gray-900/45 border border-blue-900/30 rounded-xl overflow-hidden rise rise-delay-1">
+          <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80" alt="Atmosphere and cloud layer from space" class="h-44 w-full object-cover" loading="lazy" />
+          <div class="p-6">
+            <h3 class="text-xl font-medium text-white mb-3">Atmosphere Simulation</h3>
+            <p class="text-gray-300 leading-relaxed">
+              Layered atmospheric behavior, pressure gradients, thermal effects, and turbulence for realistic environmental response.
+            </p>
+          </div>
+        </article>
+        <article class="card-glow glass-blur bg-gray-900/45 border border-blue-900/30 rounded-xl overflow-hidden rise rise-delay-2">
+          <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&w=1200&q=80" alt="Rocket launch flame and smoke" class="h-44 w-full object-cover" loading="lazy" />
+          <div class="p-6">
+            <h3 class="text-xl font-medium text-white mb-3">Rocket Simulation</h3>
+            <p class="text-gray-300 leading-relaxed">
+              High-fidelity propulsion, staging, drag, and control system modeling for robust mission and trajectory analysis.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+      <div class="mb-10 rise">
+        <h2 class="text-3xl md:text-4xl font-semibold text-white">Space Gallery</h2>
+        <p class="mt-3 text-gray-300 max-w-2xl">
+          Observation imagery that inspires our simulation research.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <article class="relative rounded-xl overflow-hidden border border-blue-900/40 h-60 sm:h-64 card-glow glass-blur rise">
+          <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&w=1000&q=80" alt="Galaxy spiral" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <p class="text-sm text-white">Galactic Structure</p>
+          </div>
+        </article>
+        <article class="relative rounded-xl overflow-hidden border border-blue-900/40 h-60 sm:h-64 card-glow glass-blur rise rise-delay-1">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1000&q=80" alt="Moon and stars" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <p class="text-sm text-white">Lunar Observation</p>
+          </div>
+        </article>
+        <article class="relative rounded-xl overflow-hidden border border-blue-900/40 h-60 sm:h-64 card-glow glass-blur rise rise-delay-2">
+          <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&w=1000&q=80" alt="Nebula cloud colors" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <p class="text-sm text-white">Nebula Dynamics</p>
+          </div>
+        </article>
+        <article class="relative rounded-xl overflow-hidden border border-blue-900/40 h-60 sm:h-64 card-glow glass-blur rise rise-delay-3">
+          <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=1000&q=80" alt="Earth from orbit" class="w-full h-full object-cover" loading="lazy" />
+          <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+            <p class="text-sm text-white">Orbital Perspective</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+      <h2 class="text-3xl md:text-4xl font-semibold text-white mb-10 rise">Sponsored by</h2>
+      <a href="https://deltashift.netlify.app/" target="_blank" rel="noopener noreferrer" class="block max-w-md card-glow glass-blur bg-gray-900/45 border border-purple-900/35 rounded-xl p-7 hover:border-purple-500/60 rise">
+        <div class="flex items-center gap-3">
+          <img
+            src="https://deltashift.netlify.app/logo.png"
+            alt="DeltaShift logo"
+            class="h-10 w-10 rounded-md object-contain bg-white/10 p-1"
+            loading="lazy"
+          />
+          <h3 class="text-2xl font-medium text-white">DeltaShift</h3>
+        </div>
+        <p class="mt-2 text-gray-300">Visit sponsor website</p>
+      </a>
+    </section>
+
+    <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+      <div class="glass-blur bg-gray-900/50 border border-blue-900/30 rounded-2xl p-6 sm:p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6 space-glow rise">
+        <div>
+          <h2 class="text-3xl font-semibold text-white">Contact AstroLinke</h2>
+          <p class="mt-3 text-gray-300">For collaboration, research partnerships, and technical discussion.</p>
+        </div>
+        <a href="mailto:linhtetln67@gmail.com" class="inline-flex items-center justify-center px-6 py-3 rounded-md border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 whitespace-nowrap">
+          Send Email
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-blue-900/30 mt-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col md:flex-row gap-2 md:items-center md:justify-between text-sm text-gray-400">
+      <p class="flex items-center gap-2">
+        <img
+          src="https://avatars.githubusercontent.com/u/252421061?s=200&v=4"
+          alt="AstroLinke logo"
+          class="h-5 w-5 rounded-sm object-cover"
+          loading="lazy"
+        />
+        AstroLinke
+      </p>
+      <p>Email: <a href="mailto:linhtetln67@gmail.com" class="hover:text-white">linhtetln67@gmail.com</a></p>
+      <p class="flex items-center gap-2">
+        Sponsor:
+        <a href="https://deltashift.netlify.app/" target="_blank" rel="noopener noreferrer" class="hover:text-white inline-flex items-center gap-1">
+          <img
+            src="https://deltashift.netlify.app/logo.png"
+            alt="DeltaShift logo"
+            class="h-4 w-4 rounded-sm object-contain bg-white/10"
+            loading="lazy"
+          />
+          DeltaShift
+        </a>
+      </p>
+    </div>
+  </footer>
+  <script>
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18, rootMargin: "0px 0px -8% 0px" }
+    );
+
+    document.querySelectorAll(".rise").forEach((el) => observer.observe(el));
+
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+
+    const closeMenu = () => {
+      mobileMenu.classList.add("hidden");
+      menuButton.setAttribute("aria-expanded", "false");
+    };
+
+    menuButton.addEventListener("click", () => {
+      const isHidden = mobileMenu.classList.contains("hidden");
+      mobileMenu.classList.toggle("hidden");
+      menuButton.setAttribute("aria-expanded", isHidden ? "true" : "false");
+    });
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+  </script>
+</body>
+</html>
