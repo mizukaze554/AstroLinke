@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AstroLinke</title>
-  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/252421061?s=200&v=4" />
+  <meta name="theme-color" content="#020617" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="./icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html,
@@ -90,7 +93,7 @@
     <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-3 text-xl font-semibold tracking-wide text-white text-glow rise">
         <img
-          src="https://avatars.githubusercontent.com/u/252421061?s=200&v=4"
+          src="./icons/icon-192.png"
           alt="AstroLinke logo"
           class="h-9 w-9 rounded-md border border-blue-400/40 object-cover"
           loading="lazy"
@@ -98,13 +101,13 @@
         <span>AstroLinke</span>
       </a>
       <div class="hidden sm:flex items-center gap-6 text-sm text-gray-300">
-        <a href="#home" class="hover:text-white rise">Home</a>
-        <a href="#vision" class="hover:text-white rise rise-delay-1">Vision</a>
-        <a href="#gallery" class="hover:text-white rise rise-delay-2">Gallery</a>
-        <a href="#projects" class="hover:text-white rise rise-delay-3">Projects</a>
-        <a href="mailto:linhtetln67@gmail.com" class="px-4 py-2 rounded-md border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 space-glow rise">Contact</a>
+        <a href="#home" class="hover:text-white transition-colors duration-200 rise">Home</a>
+        <a href="#vision" class="hover:text-white transition-colors duration-200 rise rise-delay-1">Vision</a>
+        <a href="#gallery" class="hover:text-white transition-colors duration-200 rise rise-delay-2">Gallery</a>
+        <a href="#projects" class="hover:text-white transition-colors duration-200 rise rise-delay-3">Projects</a>
+        <a href="mailto:linhtetln67@gmail.com" class="px-4 py-2 rounded-md border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 hover:-translate-y-0.5 transition-all duration-200 space-glow rise">Contact</a>
       </div>
-      <button id="menuButton" type="button" class="sm:hidden inline-flex items-center justify-center h-10 w-10 rounded-md border border-blue-500/50 bg-blue-500/10 text-blue-200" aria-label="Toggle menu" aria-controls="mobileMenu" aria-expanded="false">
+      <button id="menuButton" type="button" class="sm:hidden inline-flex items-center justify-center h-10 w-10 rounded-md border border-blue-500/50 bg-blue-500/10 text-blue-200 hover:bg-blue-500/20 transition-colors duration-200" aria-label="Toggle menu" aria-controls="mobileMenu" aria-expanded="false">
         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
@@ -112,11 +115,11 @@
     </nav>
     <div id="mobileMenu" class="sm:hidden hidden border-t border-blue-900/30 bg-gray-950/95">
       <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3 text-sm text-gray-300">
-        <a href="#home" class="mobile-link hover:text-white">Home</a>
-        <a href="#vision" class="mobile-link hover:text-white">Vision</a>
-        <a href="#gallery" class="mobile-link hover:text-white">Gallery</a>
-        <a href="#projects" class="mobile-link hover:text-white">Projects</a>
-        <a href="mailto:linhtetln67@gmail.com" class="mobile-link inline-flex w-fit px-3 py-2 text-xs rounded-md border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20">Contact</a>
+        <a href="#home" class="mobile-link hover:text-white transition-colors duration-200">Home</a>
+        <a href="#vision" class="mobile-link hover:text-white transition-colors duration-200">Vision</a>
+        <a href="#gallery" class="mobile-link hover:text-white transition-colors duration-200">Gallery</a>
+        <a href="#projects" class="mobile-link hover:text-white transition-colors duration-200">Projects</a>
+        <a href="mailto:linhtetln67@gmail.com" class="mobile-link inline-flex w-fit px-3 py-2 text-xs rounded-md border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20 transition-colors duration-200">Contact</a>
       </div>
     </div>
   </header>
@@ -133,10 +136,10 @@
             AstroLinke is an open scientific initiative building realistic gravity, atmosphere, and rocket simulation systems.
           </p>
           <div class="mt-10 flex flex-wrap gap-4 rise rise-delay-3">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-md border border-gray-700 bg-gray-900/60 hover:border-blue-400 hover:text-white">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-md border border-gray-700 bg-gray-900/60 hover:border-blue-400 hover:text-white hover:-translate-y-0.5 transition-all duration-200">
               View GitHub
             </a>
-            <a href="mailto:linhtetln67@gmail.com" class="px-6 py-3 rounded-md border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 space-glow">
+            <a href="mailto:linhtetln67@gmail.com" class="px-6 py-3 rounded-md border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 hover:-translate-y-0.5 transition-all duration-200 space-glow">
               Contact Us
             </a>
           </div>
@@ -164,8 +167,8 @@
         </p>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
-        <article class="card-glow glass-blur bg-gray-900/45 border border-blue-900/30 rounded-xl overflow-hidden rise">
-          <img src="https://images.unsplash.com/photo-1447433819943-74a20887a81e?auto=format&fit=crop&w=1200&q=80" alt="Planets in space" class="h-44 w-full object-cover" loading="lazy" />
+        <article class="card-glow glass-blur bg-gray-900/45 border border-blue-900/30 rounded-xl overflow-hidden rise hover:border-blue-700/50 hover:-translate-y-1 transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1447433819943-74a20887a81e?auto=format&fit=crop&w=1200&q=80" alt="Planets in space" class="h-44 w-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
           <div class="p-6">
             <h3 class="text-xl font-medium text-white mb-3">Gravity Simulation</h3>
             <p class="text-gray-300 leading-relaxed">
@@ -173,8 +176,8 @@
             </p>
           </div>
         </article>
-        <article class="card-glow glass-blur bg-gray-900/45 border border-blue-900/30 rounded-xl overflow-hidden rise rise-delay-1">
-          <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80" alt="Atmosphere and cloud layer from space" class="h-44 w-full object-cover" loading="lazy" />
+        <article class="card-glow glass-blur bg-gray-900/45 border border-blue-900/30 rounded-xl overflow-hidden rise rise-delay-1 hover:border-blue-700/50 hover:-translate-y-1 transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=80" alt="Atmosphere and cloud layer from space" class="h-44 w-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
           <div class="p-6">
             <h3 class="text-xl font-medium text-white mb-3">Atmosphere Simulation</h3>
             <p class="text-gray-300 leading-relaxed">
@@ -182,8 +185,8 @@
             </p>
           </div>
         </article>
-        <article class="card-glow glass-blur bg-gray-900/45 border border-blue-900/30 rounded-xl overflow-hidden rise rise-delay-2">
-          <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&w=1200&q=80" alt="Rocket launch flame and smoke" class="h-44 w-full object-cover" loading="lazy" />
+        <article class="card-glow glass-blur bg-gray-900/45 border border-blue-900/30 rounded-xl overflow-hidden rise rise-delay-2 hover:border-blue-700/50 hover:-translate-y-1 transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&w=1200&q=80" alt="Rocket launch flame and smoke" class="h-44 w-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
           <div class="p-6">
             <h3 class="text-xl font-medium text-white mb-3">Rocket Simulation</h3>
             <p class="text-gray-300 leading-relaxed">
@@ -202,26 +205,26 @@
         </p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <article class="relative rounded-xl overflow-hidden border border-blue-900/40 h-60 sm:h-64 card-glow glass-blur rise">
-          <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&w=1000&q=80" alt="Galaxy spiral" class="w-full h-full object-cover" loading="lazy" />
+        <article class="relative rounded-xl overflow-hidden border border-blue-900/40 h-60 sm:h-64 card-glow glass-blur rise hover:border-blue-700/50 hover:-translate-y-1 transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&w=1000&q=80" alt="Galaxy spiral" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
           <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
             <p class="text-sm text-white">Galactic Structure</p>
           </div>
         </article>
-        <article class="relative rounded-xl overflow-hidden border border-blue-900/40 h-60 sm:h-64 card-glow glass-blur rise rise-delay-1">
-          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1000&q=80" alt="Moon and stars" class="w-full h-full object-cover" loading="lazy" />
+        <article class="relative rounded-xl overflow-hidden border border-blue-900/40 h-60 sm:h-64 card-glow glass-blur rise rise-delay-1 hover:border-blue-700/50 hover:-translate-y-1 transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1000&q=80" alt="Moon and stars" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
           <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
             <p class="text-sm text-white">Lunar Observation</p>
           </div>
         </article>
-        <article class="relative rounded-xl overflow-hidden border border-blue-900/40 h-60 sm:h-64 card-glow glass-blur rise rise-delay-2">
-          <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&w=1000&q=80" alt="Nebula cloud colors" class="w-full h-full object-cover" loading="lazy" />
+        <article class="relative rounded-xl overflow-hidden border border-blue-900/40 h-60 sm:h-64 card-glow glass-blur rise rise-delay-2 hover:border-blue-700/50 hover:-translate-y-1 transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&w=1000&q=80" alt="Nebula cloud colors" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
           <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
             <p class="text-sm text-white">Nebula Dynamics</p>
           </div>
         </article>
-        <article class="relative rounded-xl overflow-hidden border border-blue-900/40 h-60 sm:h-64 card-glow glass-blur rise rise-delay-3">
-          <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=1000&q=80" alt="Earth from orbit" class="w-full h-full object-cover" loading="lazy" />
+        <article class="relative rounded-xl overflow-hidden border border-blue-900/40 h-60 sm:h-64 card-glow glass-blur rise rise-delay-3 hover:border-blue-700/50 hover:-translate-y-1 transition-all duration-300">
+          <img src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=1000&q=80" alt="Earth from orbit" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
           <div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
             <p class="text-sm text-white">Orbital Perspective</p>
           </div>
@@ -231,7 +234,7 @@
 
     <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
       <h2 class="text-3xl md:text-4xl font-semibold text-white mb-10 rise">Sponsored by</h2>
-      <a href="https://deltashift.netlify.app/" target="_blank" rel="noopener noreferrer" class="block max-w-md card-glow glass-blur bg-gray-900/45 border border-purple-900/35 rounded-xl p-7 hover:border-purple-500/60 rise">
+      <a href="https://deltashift.netlify.app/" target="_blank" rel="noopener noreferrer" class="block max-w-md card-glow glass-blur bg-gray-900/45 border border-purple-900/35 rounded-xl p-7 hover:border-purple-500/60 hover:-translate-y-1 transition-all duration-300 rise">
         <div class="flex items-center gap-3">
           <img
             src="https://deltashift.netlify.app/logo.png"
@@ -251,7 +254,7 @@
           <h2 class="text-3xl font-semibold text-white">Contact AstroLinke</h2>
           <p class="mt-3 text-gray-300">For collaboration, research partnerships, and technical discussion.</p>
         </div>
-        <a href="mailto:linhtetln67@gmail.com" class="inline-flex items-center justify-center px-6 py-3 rounded-md border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 whitespace-nowrap">
+        <a href="mailto:linhtetln67@gmail.com" class="inline-flex items-center justify-center px-6 py-3 rounded-md border border-blue-500/50 bg-blue-500/10 hover:bg-blue-500/20 hover:border-blue-400 hover:-translate-y-0.5 transition-all duration-200 whitespace-nowrap">
           Send Email
         </a>
       </div>
@@ -262,7 +265,7 @@
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col md:flex-row gap-2 md:items-center md:justify-between text-sm text-gray-400">
       <p class="flex items-center gap-2">
         <img
-          src="https://avatars.githubusercontent.com/u/252421061?s=200&v=4"
+          src="./icons/icon-192.png"
           alt="AstroLinke logo"
           class="h-5 w-5 rounded-sm object-cover"
           loading="lazy"
@@ -317,6 +320,12 @@
     mobileLinks.forEach((link) => {
       link.addEventListener("click", closeMenu);
     });
+
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js").catch(() => {});
+      });
+    }
   </script>
 </body>
 </html>
